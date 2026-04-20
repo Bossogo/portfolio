@@ -2,52 +2,52 @@ import Link from "next/link";
 
 const buildSystems = [
   {
-    title: "Atmospheric Commerce Platform",
-    detail: "Unified animation runtime and rendering orchestration for immersive product narratives.",
+    title: "Admin Dashboards and Internal Tools",
+    detail: "Built and improved operational dashboards with Next.js, TypeScript, reusable UI patterns, and real-time API integrations.",
   },
   {
-    title: "Signal-Driven Portfolio Engine",
-    detail: "Content, transitions, and interaction states coordinated through explicit event channels.",
+    title: "Automation and Bot Workflows",
+    detail: "Contributed to a WhatsApp bot system and helped refactor the bot architecture into a modular, command-based structure.",
   },
   {
-    title: "Realtime Ops Surface",
-    detail: "Visual telemetry overlays and incident-ready UX designed for high-tempo teams.",
+    title: "Responsive Product Interfaces",
+    detail: "Shipped responsive client-facing interfaces from Figma designs with strong focus on clarity, consistency, and maintainability.",
   },
 ];
 
 const featuredProjects = [
   {
-    title: "Aether Checkout",
+    title: "FBIS Admin Dashboard",
     summary:
-      "Immersive checkout architecture with guided motion states, cart confidence loops, and low-latency transitions.",
-    stack: ["Next.js", "TypeScript", "Motion Runtime"],
+      "Built internal dashboard modules with Next.js, TypeScript, Tailwind CSS, live operational data, reusable tables and filters, and role-based access control.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
-    title: "Sentinel Admin Surface",
+    title: "Cancer Prediction Model",
     summary:
-      "Operational dashboard with signal-ranked alerts, deterministic keyboard paths, and incident-first UX choreography.",
-    stack: ["React", "Design Tokens", "Observability"],
+      "Academic prototype for breast cancer prediction with a web interface, trained model workflow, Flask backend, and deployment on Render.",
+    stack: ["Flask", "Machine Learning", "Render"],
   },
   {
-    title: "Orbit Narrative Engine",
+    title: "Shopping Web Application",
     summary:
-      "Modular storytelling system blending 3D atmosphere and strict rendering budgets for premium brand launches.",
-    stack: ["R3F", "Three.js", "Performance Profiling"],
+      "Built a responsive shopping experience with authentication, product listings, cart flows, and backend CRUD support during internship work.",
+    stack: ["React", "JavaScript", "PHP"],
   },
 ];
 
 const craftAreas = [
   {
-    title: "Frontend Systems",
-    detail: "Component architecture, state choreography, and rendering discipline.",
+    title: "Frontend Engineering",
+    detail: "React, Next.js, TypeScript, reusable component systems, and responsive implementation from design to production.",
   },
   {
-    title: "Motion Direction",
-    detail: "Intentional animation pacing tuned for narrative and perception.",
+    title: "Backend and Integration",
+    detail: "REST API integration, Express and Node.js foundations, MongoDB and Firebase familiarity, and practical CRUD delivery.",
   },
   {
-    title: "Interaction Design",
-    detail: "Physical-feeling interfaces with clear guidance and satisfying reveal moments.",
+    title: "Team Delivery",
+    detail: "Agile collaboration, code reviews, sprint delivery, and product-minded problem solving grounded in maintainable code.",
   },
 ];
 
@@ -56,27 +56,27 @@ export default function DomainPage() {
     <main className="domain-shell">
       <div className="domain-grid">
         <header className="domain-header">
-          <p className="domain-kicker">Portfolio Unlocked</p>
-          <h1 className="domain-title">Builds, Experiments, and Code.</h1>
+          <p className="domain-kicker">Ogooluwa David Ilori</p>
+          <h1 className="domain-title">Junior Software Developer Building Useful Web Products.</h1>
           <p className="domain-summary">
-            This space showcases selected builds where visual direction, technical decisions, and user
-            experience are shaped together. Each project below is about creating useful, expressive
-            products with code.
+            I build scalable web applications, admin dashboards, and automation tools with a strong
+            focus on clean architecture, maintainability, and real-world problem solving. My work spans
+            frontend systems, API integration, internal tooling, and production-ready user interfaces.
           </p>
           <div className="domain-toolbar" aria-label="Build capabilities">
+            <span className="domain-pill">JavaScript + TypeScript</span>
             <span className="domain-pill">React + Next.js</span>
-            <span className="domain-pill">Three.js/R3F</span>
-            <span className="domain-pill">Motion Systems</span>
-            <span className="domain-pill">Interaction Architecture</span>
+            <span className="domain-pill">Node.js + Express</span>
+            <span className="domain-pill">REST APIs + RBAC</span>
           </div>
         </header>
 
         <section className="domain-main">
           <article className="domain-panel">
-            <h2>Selected Build Tracks</h2>
+            <h2>Experience Highlights</h2>
             <p>
-              Projects are framed as build outcomes: how people use the interface, what they feel at
-              each step, and how performance holds up in real use.
+              Recent work includes internal admin platforms, automation workflows, and responsive
+              product interfaces delivered across internship and junior engineering roles.
             </p>
             <ul className="domain-list">
               {buildSystems.map((item) => (
@@ -87,7 +87,7 @@ export default function DomainPage() {
               ))}
             </ul>
 
-            <h2 className="domain-subheading">Featured Builds</h2>
+            <h2 className="domain-subheading">Selected Projects</h2>
             <div className="domain-cards">
               {featuredProjects.map((project) => (
                 <article key={project.title} className="domain-card">
@@ -104,10 +104,11 @@ export default function DomainPage() {
           </article>
 
           <article className="domain-panel">
-            <h2>Craft Focus</h2>
+            <h2>Core Strengths</h2>
             <p>
-              Delivery pairs aesthetics with practical clarity. Visual intensity should never compromise
-              reliability, accessibility, or task completion.
+              My focus is practical software delivery: building interfaces that are clean and reliable,
+              connecting them to useful backend systems, and collaborating effectively with product and
+              engineering teams.
             </p>
             <ul className="domain-list">
               {craftAreas.map((item) => (
@@ -119,7 +120,7 @@ export default function DomainPage() {
             </ul>
 
             <Link href="/" className="domain-link">
-              Back to Intro
+              Back to Landing
             </Link>
           </article>
         </section>

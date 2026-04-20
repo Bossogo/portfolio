@@ -49,11 +49,11 @@ function getMediaQuerySnapshot(query: string) {
 export default function Home() {
   const router = useRouter();
   const [phase, setPhase] = useState<Phase>("resisting");
-  const [flickPoint, setFlickPoint] = useState({ x: 0, y: 0 });
   const [flickVisible, setFlickVisible] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [repelCount, setRepelCount] = useState(0);
   const globeAnchorRef = useRef<HTMLDivElement>(null);
+  const flickHandRef = useRef<HTMLDivElement>(null);
   const globeTargetRef = useRef<GlobeTarget | null>(null);
   const anchorStyleTargetRef = useRef({ x: Number.NaN, y: Number.NaN, size: Number.NaN });
   const enterButtonRef = useRef<HTMLButtonElement>(null);
@@ -130,7 +130,12 @@ export default function Home() {
         window.clearTimeout(flickTimeoutRef.current);
       }
 
-      setFlickPoint(point);
+      const flickHand = flickHandRef.current;
+      if (flickHand) {
+        flickHand.style.setProperty("--flick-x", `${point.x}px`);
+        flickHand.style.setProperty("--flick-y", `${point.y}px`);
+      }
+
       setFlickVisible(true);
       setPhase("repelling");
 
@@ -203,9 +208,9 @@ export default function Home() {
       />
 
       <div
+        ref={flickHandRef}
         aria-hidden
         className={flickVisible ? "flick-hand flick-hand--visible" : "flick-hand"}
-        style={{ left: flickPoint.x, top: flickPoint.y }}
       />
 
       <section className="hero-stage">
@@ -233,9 +238,12 @@ export default function Home() {
               <span>Build momentum</span>
               <span>{phase === "allowed" ? "Complete" : `${repelsComplete}/${requiredRepels}`}</span>
             </div>
-            <div className="resistance-meter__track">
-              <span className="resistance-meter__fill" style={{ width: `${resistanceProgress}%` }} />
-            </div>
+            <progress
+              className="resistance-meter__progress"
+              value={resistanceProgress}
+              max={100}
+              aria-label="Build momentum progress"
+            />
           </div>
 
           {phase !== "allowed" && !cursorActive && (

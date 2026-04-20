@@ -356,18 +356,31 @@ body.custom-cursor-active * {
   color: rgba(171, 218, 248, 0.88);
 }
 
-.resistance-meter__track {
+.resistance-meter__progress {
+  width: 100%;
   height: 7px;
+  border: none;
   border-radius: 999px;
   background: rgba(36, 66, 98, 0.7);
   overflow: hidden;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.resistance-meter__fill {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
+.resistance-meter__progress::-webkit-progress-bar {
+  background: rgba(36, 66, 98, 0.7);
+  border-radius: 999px;
+}
+
+.resistance-meter__progress::-webkit-progress-value {
   background: linear-gradient(90deg, #3e7fff, #56e0b7);
+  border-radius: 999px;
+  transition: width 240ms ease;
+}
+
+.resistance-meter__progress::-moz-progress-bar {
+  background: linear-gradient(90deg, #3e7fff, #56e0b7);
+  border-radius: 999px;
   transition: width 240ms ease;
 }
 
@@ -419,6 +432,7 @@ body.custom-cursor-active * {
   background: rgba(6, 13, 27, 0.64);
   border-radius: 24px;
   padding: clamp(1.1rem, 2.2vw, 2rem);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -624,6 +638,8 @@ body.custom-cursor-active * {
 
 .flick-hand {
   position: fixed;
+  left: var(--flick-x, -100px);
+  top: var(--flick-y, -100px);
   z-index: 28;
   width: 54px;
   height: 54px;
