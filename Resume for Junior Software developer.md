@@ -3,7 +3,7 @@ title: CV
 year: 2026
 ---
 # Ogooluwa David Ilori
-- Title: Junior Software Developer
+- Title: Software Developer
 - Phone: 08170443003
 - Email: ogooluwailori@gmail.com
 - Linkedin: https://www.linkedin.com/in/ogooluwa-ilori/
@@ -12,7 +12,7 @@ year: 2026
 
 ## Summary
 ### Hey,
-#### I'm a Junior Software Developer with experience building scalable web applications, admin dashboards, and automation tools. Skilled in React, Next.js, and Node.js, with hands-on experience integrating APIs, implementing role-based access systems, and improving internal tooling efficiency. Strong focus on clean architecture, maintainability, and real-world problem solving.
+#### I'm a Software Developer with experience building scalable web applications, admin dashboards, and automation tools. Skilled in React, Next.js, and Node.js, with hands-on experience integrating APIs, implementing role-based access systems, and improving internal tooling efficiency. Strong focus on clean architecture, maintainability, and real-world problem solving.
 
 ---
 ## TECHNICAL SKILLS

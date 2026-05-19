@@ -57,7 +57,7 @@ export default function DomainPage() {
       <div className="domain-grid">
         <header className="domain-header">
           <p className="domain-kicker">Ogooluwa David Ilori</p>
-          <h1 className="domain-title">Junior Software Developer Building Useful Web Products.</h1>
+          <h1 className="domain-title">Software Developer Building Useful Web Products.</h1>
           <p className="domain-summary">
             I build scalable web applications, admin dashboards, and automation tools with a strong
             focus on clean architecture, maintainability, and real-world problem solving. My work spans
@@ -76,7 +76,7 @@ export default function DomainPage() {
             <h2>Experience Highlights</h2>
             <p>
               Recent work includes internal admin platforms, automation workflows, and responsive
-              product interfaces delivered across internship and junior engineering roles.
+              product interfaces delivered across engineering roles.
             </p>
             <ul className="domain-list">
               {buildSystems.map((item) => (
